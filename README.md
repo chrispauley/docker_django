@@ -122,3 +122,33 @@ Switch to the docker host machine.
 docker run -ti -d -p 8000:8000 chrispauley/guestbook
 ```
 Test it from your browser and enjoy.
+
+## Docker Compose
+- docker-compose build
+- docker-compose up
+- docker-compose kill <containerId>
+- docker-compose stop <containerId>
+- docker-compose rm <containerId>
+- docker-compose env
+
+## Docker machine
+- docker-machine create <hostId>
+  creates a new docker host (like on AWS, Rackspace, etc.)
+- docker-machine ls
+- docker-machine ssh <hostId>
+  connects to the host using ssh
+- docker-machine rm <hostId>
+  destroys a host
+
+### Supported Providers
+- amazonec2
+- azure
+- digitalocean
+- exoscale
+- google
+- openstack
+- rackspace
+- softlayer
+- virtualbox
+- vmwarecloudair
+- vmwarevsphere
