@@ -1,6 +1,6 @@
-# docker-express
+# Project: docker_django
 
-This is a bare minimum Django server app that is wrapped in a Docker image.
+This is a bare minimum Django server app that is wrapped in a Docker image. It is based upon a PyTexas demo by Mark Adams.
 
 ## Installation
 Install Docker
@@ -58,7 +58,7 @@ Switch to your browser and get: [http://127.0.0.1:8000/](http://127.0.0.1:8000)
 ## Clean up
 Kill the running process
 ```
-docker kill <containerId>
+docker kill [containerId]
 ```
 
 List container instances to be removed
@@ -126,19 +126,19 @@ Test it from your browser and enjoy.
 ## Docker Compose
 - docker-compose build
 - docker-compose up
-- docker-compose kill <containerId>
-- docker-compose stop <containerId>
-- docker-compose rm <containerId>
+- docker-compose kill [containerId]
+- docker-compose stop [containerId]
+- docker-compose rm [containerId]
 - docker-compose env
 
-## Docker machine
-- docker-machine create <hostId>
-  creates a new docker host (like on AWS, Rackspace, etc.)
-- docker-machine ls
-- docker-machine ssh <hostId>
-  connects to the host using ssh
-- docker-machine rm <hostId>
-  destroys a host
+## Docker Machine
+*  docker-machine create [hostId]
+  - creates a new docker host (like on AWS, Rackspace, etc.)
+*  docker-machine ls
+*  docker-machine ssh [hostId]
+  - connects to the host using ssh
+* docker-machine rm [hostId]
+  - destroys a host
 
 ### Supported Providers
 - amazonec2
