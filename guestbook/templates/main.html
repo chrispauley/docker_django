@@ -1,0 +1,25 @@
+{% load staticfiles %}
+<div style="width: 500px; margin-left: auto; margin-right: auto;">
+    <h1>Welcome to our Guestbook!</h1>
+
+    <h2>Guests</h2>
+    <p>These are the guests who have signed our guestbook:</p>
+
+    {% if entries|length > 0 %}
+    <ul>
+        {% for entry in entries %}
+        <li>{{ entry.name }} ({{ entry.timestamp.date|date:"c" }})</li>
+        {% endfor %}
+    </ul>
+    {% else %}
+    <p>Nobody has signed the guestbook yet! Be the first person!</p>
+    {% endif %}
+    <h3>Sign our Guestbook</h3>
+    <form action="/" method="post">
+        {% csrf_token %} {{ form }}
+        <input type="submit" value="Submit" />
+    </form>
+
+    <p>{{ hits }} people have visited this website since January 15th, 1998</p>
+
+</div>
